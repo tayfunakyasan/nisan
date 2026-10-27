@@ -1,83 +1,360 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilara & Tayfun | Nişan Davetiyesi</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fdfbf7;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h1 {
-            color: #b76e79;
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-        .details {
-            margin: 25px 0;
-            padding: 15px;
-            background: #f9f6f0;
-            border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #b76e79;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #a35d68;
-        }
-        .map-container {
-            margin-top: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-    </style>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilara & Tayfun — Nişan Davetiyesi</title>
+<!-- WhatsApp ve Sosyal Medya Ön İzleme Etiketleri -->
+    <meta property="og:title" content="Dilara & Tayfun — Nişan Davetiyesi">
+    <meta property="og:description" content="15 Kasım 2026 • Bu mutlu günümüzde sizleri de aramızda görmekten mutluluk duyarız.">
+    <meta property="og:image" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
+    <meta property="og:url" content="https://tayfunakyasan.github.io/nisan/"> 
+    <meta property="og:type" content="website">
+<meta property="og:image:secure_url" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Konfeti Efekti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+:root {
+--bg-spring: #faf7f2;
+--card-bg: rgba(255, 255, 255, 0.90);
+--pink-accent: #e8a5b8;
+--green-accent: #7fa988;
+--gold-soft: #c5a059;
+--text-dark: #3a3835;
+--text-muted: #78746d;
+--border-soft: rgba(232, 165, 184, 0.35);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+}
+
+body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+background-color: var(--bg-spring);
+color: var(--text-dark);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 24px 14px;
+position: relative;
+overflow-x: hidden;
+background: linear-gradient(135deg, #fcfaf7 0%, #f7eee9 50%, #f0f4ee 100%);
+}
+
+/* BAHAR KELEBEKLERİ VE KUŞLARIN UÇUŞMA ANİMASYONLARI */
+.spring-element {
+position: fixed;
+pointer-events: none;
+z-index: 1;
+opacity: 0.7;
+font-size: 1.5rem;
+animation: floatAround linear infinite;
+}
+
+@keyframes floatAround {
+0% {
+transform: translate(0, 0) rotate(0deg);
+opacity: 0;
+}
+20% { opacity: 0.8; }
+80% { opacity: 0.8; }
+100% {
+transform: translate(110vw, -110vh) rotate(360deg);
+opacity: 0;
+}
+}
+
+/* Ana Davetiye Kartı */
+.container {
+width: 100%;
+max-width: 440px;
+background: var(--card-bg);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.95);
+border-radius: 36px;
+padding: 36px 22px;
+box-shadow: 0 20px 50px rgba(220, 190, 180, 0.25), inset 0 0 20px rgba(255, 255, 255, 0.8);
+text-align: center;
+position: relative;
+z-index: 10;
+}
+
+.tag {
+font-size: 0.75rem;
+letter-spacing: 4px;
+text-transform: uppercase;
+color: var(--pink-accent);
+font-weight: 600;
+margin-bottom: 6px;
+}
+
+h1 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.8rem;
+font-weight: 600;
+color: var(--text-dark);
+margin-bottom: 18px;
+line-height: 1.1;
+}
+
+h1 span {
+color: var(--pink-accent);
+font-style: italic;
+font-weight: 400;
+}
+
+/* FOTOĞRAF KENAR YUMUŞATMA (RADYAL MASKING) EFEKTİ */
+.photo-container {
+position: relative;
+width: 100%;
+margin: 0 auto 24px auto;
+border-radius: 28px;
+overflow: hidden;
+-webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+box-shadow: 0 8px 25px rgba(232, 165, 184, 0.15);
+}
+
+.photo-container img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+border-radius: 28px;
+transform: scale(1.02);
+}
+
+.quote {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+font-size: 1.2rem;
+color: var(--text-muted);
+line-height: 1.45;
+margin-bottom: 26px;
+padding: 0 10px;
+}
+
+/* Etkinlik Detayları */
+.details-grid {
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin-bottom: 26px;
+}
+
+.detail-card {
+background: rgba(255, 255, 255, 0.85);
+border: 1px solid var(--border-soft);
+padding: 16px;
+border-radius: 20px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.detail-title {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(--green-accent);
+font-weight: 600;
+margin-bottom: 4px;
+}
+
+.detail-text {
+font-size: 0.98rem;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+/* Geri Sayım */
+.countdown-title {
+font-size: 0.7rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--text-muted);
+margin-bottom: 10px;
+}
+
+.countdown {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 8px;
+margin-bottom: 28px;
+}
+
+.time-box {
+background: #ffffff;
+border: 1px solid var(--border-soft);
+padding: 12px 4px;
+border-radius: 16px;
+box-shadow: 0 4px 10px rgba(232, 165, 184, 0.12);
+}
+
+.time-box .num {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.6rem;
+font-weight: 700;
+color: var(--pink-accent);
+line-height: 1;
+}
+
+.time-box .unit {
+font-size: 0.62rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: var(--text-muted);
+margin-top: 4px;
+}
+
+/* Butonlar */
+.btn-group {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+padding: 16px;
+border-radius: 20px;
+font-size: 0.92rem;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.btn-spring {
+background: linear-gradient(135deg, #e8a5b8 0%, #7fa988 100%);
+color: #ffffff;
+box-shadow: 0 8px 20px rgba(127, 169, 136, 0.3);
+}
+
+.btn-spring:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 25px rgba(127, 169, 136, 0.4);
+}
+
+.footer {
+margin-top: 22px;
+font-size: 0.75rem;
+color: var(--text-muted);
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Dilara & Tayfun</h1>
-        <p>Bu mutlu günümüzde siz değerli dostlarımızı aramızda görmekten onur duyarız.</p>
-        
-        <div class="details">
-            <p>📅 <strong>Tarih:</strong> 15 Kasım Pazar</p>
-            <p>⏰ <strong>Saat:</strong> 18:30</p>
-            <p>📍 <strong>Yer:</strong> Marina Event / Atakum / Samsun</p>
-        </div>
+<!-- SİTEDE UÇUŞAN İLKBAHAR KELEBEKLERİ VE KUŞLAR -->
+<div class="spring-element" style="top: 85vh; left: -10vw; animation-duration: 14s; animation-delay: 0s;">🦋</div>
+<div class="spring-element" style="top: 95vh; left: 10vw; animation-duration: 18s; animation-delay: 3s;">🕊️</div>
+<div class="spring-element" style="top: 75vh; left: -5vw; animation-duration: 12s; animation-delay: 6s;">🌸</div>
+<div class="spring-element" style="top: 90vh; left: 30vw; animation-duration: 16s; animation-delay: 2s;">🦋</div>
+<div class="spring-element" style="top: 80vh; left: 50vw; animation-duration: 15s; animation-delay: 5s;">🕊️</div>
+<div class="spring-element" style="top: 100vh; left: 70vw; animation-duration: 20s; animation-delay: 1s;">🌸</div>
 
-        <!-- Yol Tarifi / Harita Butonu -->
-        <a href="https://www.google.com/maps/place/Marina+Event+Room/@41.3684346,36.2235578,17z/data=!3m1!4b1!4m6!3m5!1s0x40887f71127b6851:0x8e031ec9807c3808!8m2!3d41.3684346!4d36.2235578!16s%2Fg%2F11w92h0_7r" target="_blank" class="btn">Yol Tarifi Al (Haritada Aç)</a>
+<div class="container">
+<div class="tag">Nişan Töreni Davetiyesi</div>
+<h1>Dilara <span>&</span> Tayfun</h1>
 
-        <!-- İsteğe bağlı: Web sitesi içinde görünen harita -->
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5988.520087673682!2d36.22355786122238!3d41.368434610377825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887f71127b6851%3A0x8e031ec9807c3808!2sMarina%20Event%20Room!5e0!3m2!1str!2str!4v1793125058797!5m2!1str!2str" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-    </div>
+<!-- Kenarları Yumuşatılmış İlkbahar Temalı Fotoğraf -->
+<div class="photo-container">
+<img src="davetiye.jpg" alt="Dilara & Tayfun İlkbahar Davetiyesi">
+</div>
 
+<p class="quote">“Baharın gelişiyle açan çiçekler gibi, hayatımızın bu yeni mevsimine sizinle adım atmaktan mutluluk duyarız.”</p>
+
+<!-- Etkinlik Detayları -->
+<div class="details-grid">
+<div class="detail-card">
+<div class="detail-title">Tarih & Saat</div>
+<div class="detail-text">15 Kasım 2026, Pazar • 18:30</div>
+</div>
+<div class="detail-card">
+<div class="detail-title">Mekan</div>
+<div class="detail-text">Marina Event Atakum / Samsun</div>
+</div>
+</div>
+
+<!-- Canlı Geri Sayım -->
+<div class="countdown-title">Büyük Günü Beklerken</div>
+<div class="countdown">
+<div class="time-box">
+<div class="num" id="days">00</div>
+<div class="unit">Gün</div>
+</div>
+<div class="time-box">
+<div class="num" id="hours">00</div>
+<div class="unit">Saat</div>
+</div>
+<div class="time-box">
+<div class="num" id="minutes">00</div>
+<div class="unit">Dakika</div>
+</div>
+<div class="time-box">
+<div class="num" id="seconds">00</div>
+<div class="unit">Saniye</div>
+</div>
+</div>
+
+<!-- İnteraktif Konum Butonu (LCV Kaldırıldı) -->
+<div class="btn-group">
+<a href="https://maps.app.goo.gl/5UGkwvyngYT5yRYaA" target="_blank" class="btn btn-spring">
+📍 Konum ve Yol Tarifi
+</a>
+</div>
+
+<div class="footer">
+Bu mutlu günümüzde sizleri de aramızda görmekten onur duyarız.
+</div>
+</div>
+
+<script>
+// Sayfa Açılışında Bahar Konfetisi
+window.addEventListener('load', () => {
+confetti({
+particleCount: 45,
+spread: 65,
+origin: { y: 0.6 },
+colors: ['#e8a5b8', '#7fa988', '#f7eee9', '#c5a059']
+});
+});
+
+// Canlı Geri Sayım Hesaplayıcı (15 Kasım 2026, 18:30)
+const targetDate = new Date("Nov 15, 2026 18:30:00").getTime();
+
+function updateCountdown() {
+const now = new Date().getTime();
+const diff = targetDate - now;
+
+if (diff > 0) {
+document.getElementById("days").innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+document.getElementById("hours").innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+document.getElementById("minutes").innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+document.getElementById("seconds").innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+}
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 </body>
 </html>
