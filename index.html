@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dilara & Tayfun — Nişan Davetiyesi</title>
     <!-- WhatsApp ve Sosyal Medya Ön İzleme Etiketleri -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dilara & Tayfun — Nişan Davetiyesi">
-<meta property="og:description" content="15 Kasım 2026 • Bu mutlu günümüzde sizleri de aramızda görmekten mutluluk duyarız.">
-<meta property="og:image" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
-<meta property="og:image:secure_url" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://tayfunakyasan.github.io/nisan/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dilara & Tayfun — Nişan Davetiyesi">
+    <meta property="og:description" content="15 Kasım 2026 • Bu mutlu günümüzde sizleri de aramızda görmekten mutluluk duyarız.">
+    <meta property="og:image" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
+    <meta property="og:image:secure_url" content="https://tayfunakyasan.github.io/nisan/davetiye.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tayfunakyasan.github.io/nisan/">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -254,16 +254,6 @@
             box-shadow: 0 12px 25px rgba(127, 169, 136, 0.4);
         }
 
-        .btn-outline {
-            background: #ffffff;
-            color: var(--text-dark);
-            border: 1px solid var(--border-soft);
-        }
-
-        .btn-outline:hover {
-            background: #fcf8f5;
-        }
-
         .footer {
             margin-top: 22px;
             font-size: 0.75rem;
@@ -287,7 +277,6 @@
 
         <!-- Kenarları Yumuşatılmış İlkbahar Temalı Fotoğraf -->
         <div class="photo-container">
-            <!-- Görsel klasörde 'davetiye.jpg' olarak bulunmalıdır -->
             <img src="davetiye.jpg" alt="Dilara & Tayfun İlkbahar Davetiyesi">
         </div>
 
@@ -297,7 +286,7 @@
         <div class="details-grid">
             <div class="detail-card">
                 <div class="detail-title">Tarih & Saat</div>
-                <div class="detail-text">15 Kasım 2026, Pazar • 19:00</div>
+                <div class="detail-text">15 Kasım 2026, Pazar • 18:30</div>
             </div>
             <div class="detail-card">
                 <div class="detail-title">Mekan</div>
@@ -326,18 +315,15 @@
             </div>
         </div>
 
-        <!-- İnteraktif Butonlar -->
+        <!-- İnteraktif Konum Butonu (LCV Kaldırıldı) -->
         <div class="btn-group">
-            <a href="<iframe src="https://maps.app.goo.gl/5UGkwvyngYT5yRYaA" target="_blank" class="btn btn-spring">
+            <a href="https://maps.app.goo.gl/5UGkwvyngYT5yRYaA" target="_blank" class="btn btn-spring">
                 📍 Konum ve Yol Tarifi
-            </a>
-            <a href="https://wa.me/905XXXXXXXXX?text=Nişanınıza%20katılıyorum!" target="_blank" class="btn btn-outline">
-                💬 Katılım Bildir (LCV)
             </a>
         </div>
 
         <div class="footer">
-            Katılım durumunuzu en geç 10 Kasım'a kadar bildirmenizi rica ederiz.
+            Bu mutlu günümüzde sizleri de aramızda görmekten onur duyarız.
         </div>
     </div>
 
@@ -352,8 +338,8 @@
             });
         });
 
-        // Canlı Geri Sayım Hesaplayıcı
-        const targetDate = new Date("Nov 15, 2026 19:00:00").getTime();
+        // Canlı Geri Sayım Hesaplayıcı (15 Kasım 2026, 18:30)
+        const targetDate = new Date("Nov 15, 2026 18:30:00").getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
